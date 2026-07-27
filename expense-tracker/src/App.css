@@ -156,3 +156,45 @@ input , select{
   min-height: 0;
     height: 100vh;
 }
+@media (max-width: 768px) {
+  .app {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  .sidebar {
+    height: auto;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #292524;
+    padding: 12px;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .sidebtn {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .content {
+    height: auto;
+    overflow-y: visible;
+    padding: 16px;
+  }
+
+  .summary-grid {
+    flex-direction: column;
+  }
+
+  .charts-row {
+    flex-direction: column;
+  }
+}
