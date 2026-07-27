@@ -91,6 +91,7 @@ function App() {
  
       <main className='content'>
         {page == "dashboard" && (
+          <div className="page-enter">
           <div>
              <h1 style={{color:"whitesmoke"}}>Dashboard</h1>
             <div className='summary-grid'>
@@ -123,10 +124,12 @@ function App() {
               ))}
             </ul>
           </div>
+          </div>
         )}
  
         {page == "add" && (
          <>
+         <div className="page-enter">
          <h1 style={{color:"whitesmoke"}}>Add New Transaction</h1>
           <form className="submitform" onSubmit={handleSubmit}>
             <input type="text" placeholder='Description' value={description} onChange={(e) => setDescription(e.target.value)} />
@@ -146,10 +149,12 @@ function App() {
             </select>
             <button className="addbtn" type="submit"><PlusCircle size={14}/>Add transaction</button>
           </form>
+       </div>
         </>
         )}
  
         {page == "transactions" && (
+           <div className="page-enter">
           <div>
             <h1 style={{color:'whitesmoke'}}>Transactions</h1>
             <input type="text" value={search} placeholder='Search Transactions' onChange={(e) => setSearch(e.target.value)} />
@@ -209,10 +214,12 @@ function App() {
               ))}
             </ul>
           </div>
+          </div>
         )}
  
         {page == "analytics" && (
           <>
+          <div className="page-enter">
           <h1 style={{color:"whitesmoke"}}>Analytics</h1>
           <div className="charts-row">
             <div className="charts" id="ch1">
@@ -245,6 +252,7 @@ function App() {
               </ResponsiveContainer>
               </div>
             </div>
+          </div>
           </div>
           </>
         )}
